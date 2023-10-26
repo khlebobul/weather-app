@@ -5,7 +5,7 @@ import 'package:weather_app/models/weather_models.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherServices {
-  static const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
+  static const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather';
   final String apiKey;
 
   WeatherServices(this.apiKey);
