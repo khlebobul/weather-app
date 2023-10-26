@@ -77,13 +77,17 @@ class _WeatherState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[600],
+        backgroundColor: Color.fromARGB(255, 133, 132, 132),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 _weather?.cityName ?? "loading city...",
+                style: const TextStyle(
+                  fontSize: 40,
+                  color: Color.fromARGB(255, 23, 23, 23),
+                ),
               ),
 
               // animation
@@ -91,10 +95,20 @@ class _WeatherState extends State<WeatherPage> {
 
               Text(
                 '${_weather?.temperature.round()}°C',
+                style: const TextStyle(
+                  fontSize: 40,
+                  color: Color.fromARGB(255, 18, 18, 18),
+                ),
               ),
 
               // weather condition
-              Text(_weather?.mainCondition ?? ""),
+              Text(
+                _weather?.mainCondition ?? "",
+                style: const TextStyle(
+                  fontSize: 40,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
             ],
           ),
         ));
